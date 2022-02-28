@@ -180,7 +180,7 @@ the object buffer.
 
   # Get the object in the second client. This blocks until the object has been sealed.
   object_id2 = plasma.ObjectID(20 * b"a")
-  [buffer2] = client2.get_buffers([object_id])
+  [buffer2] = client2.get_buffers([object_id2])
 
 If the object has not been sealed yet, then the call to client.get_buffers will
 block until the object has been sealed by the client constructing the object.
